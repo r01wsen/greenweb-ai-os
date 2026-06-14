@@ -1,22 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-    title: 'GreenWeb AI OS - Your Intelligent AI Assistant',
-    description: 'A powerful multi-domain AI system with advanced capabilities',
+  title: 'GreenWeb AI OS - Multi-Domain AI Intelligence',
+  description: 'Smart AI for agriculture, medical, legal, life coaching, relationships, and engineering',
+  keywords: ['AI', 'agriculture', 'medical', 'legal', 'life coach', 'engineering'],
 }
 
 export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode
-}) {
-    return (
-          <html lang="en">
-                <body className={inter.className}>{children}</body>body>
-          </html>html>
-        )
-}</html>
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <body style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+        {children}
+      </body>
+    </html>
+  )
+}

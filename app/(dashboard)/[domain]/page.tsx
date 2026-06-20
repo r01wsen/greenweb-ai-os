@@ -222,7 +222,7 @@ export default async function DomainDashboardPage({ params, searchParams }: Doma
       <GlobalAdminDashboard
         profile={profile}
         stats={stats}
-        allFarms={(allFarms ?? []) as Farm[]}
+        allFarms={(allFarms ?? []) as unknown as Farm[]}
         selectedFarmId={farm_id}
       />
     )

@@ -162,7 +162,7 @@ async function getFarmDashboardStats(
 
   if (!farm) return null
 
-  const readingsMap: Record<string, (typeof recentReadings)[number]> = {}
+  const readingsMap: Record<string, unknown> = {}
   recentReadings?.forEach((r) => {
     const key = (r.sensor as { sensor_type: string })?.sensor_type
     if (key && !readingsMap[key]) {
